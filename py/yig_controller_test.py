@@ -1,5 +1,5 @@
 import sys
-sys.path.append('..')
+sys.path.append("gpib_instrument_control")
 import numpy as np
 import matplotlib.pyplot as plt
 import hp_3478a
