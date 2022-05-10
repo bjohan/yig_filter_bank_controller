@@ -54,7 +54,7 @@ class Switch:
 
 class YigChannel:
     def __init__(self, dev, designation):
-        self.dev=dev;
+        self.dev=dev
         self.designation=designation
         self.outputChannel=None
         self.outputValue=None
@@ -68,6 +68,34 @@ class YigChannel:
         if value not in range(-32768, 32768):
             raise ValueError("Illegal value %d, must be -32768..32767"%(value))
         self.dev.write(b"YIG %s %d %d\n"%(self.designation, channel, value))
+
+    def writeFilterSlope(self, i, f):
+        if i not in range(8):
+            raise ValueError("Illegal filter index, must be 0..7")
+        self.dev.write(b"COEF %s S %d %f\n"%(self.designation, i, f))
+
+    def writeFilterOffset(self, i, offset):
+        if i not in range(8):
+            raise ValueError("Illegal filter index, must be 0..7")
+        #if offset not in range(-32768, 32768):
+        #    raise ValueError("Illegal offset %d, must be -32768..32767"%(value))
+        self.dev.write(b"COEF %s O %d %f\n"%(self.designation, i, offset))
+
+    def writeFilterLowLim(self, i, f):
+        if i not in range(8):
+            raise ValueError("Illegal filter index, must be 0..7")
+        self.dev.write(b"COEF %s L %d %f\n"%(self.designation, i, f))
+
+    def writeFilterHighLim(self, i, f):
+        if i not in range(8):
+            raise ValueError("Illegal filter index, must be 0..7")
+        self.dev.write(b"COEF %s H %d %f\n"%(self.designation, i, f))
+
+    def save(self):
+        self.dev.write(b"M S\n")
+
+    def load(self):
+        self.dev.write(b"M L\n")
 
     def parseStatusLine(self, line):
         if b'YIG' in line:
@@ -153,9 +181,12 @@ class YigFilter:
     def setSwitch(self):
         self.yc.switchA.set(self.num+1)
 
-    def tuneTo(self, f):
+    def tuneTo(self, f, channel = None):
         self.setSwitch()
-        self.yc.yigA.set(self.num, self.computetTuningWord(f))
+        if channel is None:
+            self.yc.yigA.set(self.num, self.computetTuningWord(f))
+        else:
+            channel.set(self.num, self.computetTuningWord(f))
 
     def finRange(self, f):
         if f > self.flow and f < self.fhigh:
