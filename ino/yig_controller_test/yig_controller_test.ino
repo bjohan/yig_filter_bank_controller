@@ -13,17 +13,8 @@
 #include <AudioCodec.h>
 #include <SerialCommands.h>
 #include <EEPROM.h>
-#include "wm_8731.hpp"
+//#include "wm_8731.hpp"
 
-/*float yigASlope[8];
-int yigAOffset[8];
-float yigALowLim[8];
-float yigAHighLim[8];
-
-float yigBSlope[8];
-int yigBOffset[8];
-float yigBLowLim[8];
-float yigBHighLim[8];*/
 
 struct yigParam{
   float slope[8];
@@ -66,7 +57,7 @@ int yigBControl=0;
 
 char primChan='A';
 
-Wm8731 *codec;
+//Wm8731 *codec;
 
 char serial_command_buffer_[32];
 SerialCommands serial_commands_(&Serial, serial_command_buffer_, sizeof(serial_command_buffer_), "\n", " ");
