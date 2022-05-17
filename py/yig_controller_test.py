@@ -162,21 +162,29 @@ class YigController:
 
 
 class YigFilter:
-    def __init__(self, flow, fhigh, offset, slope, yigController, num):
+    def __init__(self, flow, fhigh, offset, slope, yigController, num, new=False):
         self.flow=flow
         self.fhigh=fhigh
         self.offset=offset
         self.slope=slope
         self.yc=yigController
         self.num=num
+        self.new=new
 
     def computetTuningWord(self, f):
-        return int((f-self.offset)/self.slope)
+        if self.new:
+            return int(f*self.slope+self.offset)
+        else:
+            return int((f-self.offset)/self.slope)
 
     def computeSlopeLimits(self):
-        ma=-32768*self.slope+self.offset
-        mi=32767*self.slope+self.offset
-        return (mi, ma)
+        if self.new:
+            raise Exception("Implement if needed")
+            pass
+        else:
+            ma=-32768*self.slope+self.offset
+            mi=32767*self.slope+self.offset
+            return (mi, ma)
 
     def setSwitch(self):
         self.yc.switchA.set(self.num+1)
