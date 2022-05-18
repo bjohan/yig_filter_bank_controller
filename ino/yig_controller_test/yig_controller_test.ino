@@ -268,8 +268,8 @@ void cmd_print_coeff(SerialCommands *sender){
     sender->GetSerial()->print(F("Channel A "));
     sender->GetSerial()->print(i);
     sender->GetSerial()->print(F(" Slope: "));
-    sender->GetSerial()->print(yp.a.slope[i]*1e-6);
-    sender->GetSerial()->print(F(" [MHz/LSB] Offset: "));
+    sender->GetSerial()->print(yp.a.slope[i]*1e6);
+    sender->GetSerial()->print(F(" [LSB/MHz] Offset: "));
     sender->GetSerial()->print(yp.a.offset[i]);
     sender->GetSerial()->print(F(" [LSB] FrequencyLow: "));
     sender->GetSerial()->print(yp.a.lowLim[i]*1e-6);
@@ -281,8 +281,8 @@ void cmd_print_coeff(SerialCommands *sender){
     sender->GetSerial()->print(F("Channel B "));
     sender->GetSerial()->print(i);
     sender->GetSerial()->print(F(" Slope: "));
-    sender->GetSerial()->print(yp.b.slope[i]*1e-6);
-    sender->GetSerial()->print(F(" [MHz/LSB] Offset: "));
+    sender->GetSerial()->print(yp.b.slope[i]*1e6);
+    sender->GetSerial()->print(F(" [LSB/MHz] Offset: "));
     sender->GetSerial()->print(yp.b.offset[i]);
     sender->GetSerial()->print(F(" [LSB] FrequencyLow: "));
     sender->GetSerial()->print(yp.b.lowLim[i]*1e-6);
@@ -320,7 +320,7 @@ void cmd_tune(SerialCommands *sender){
     if(yigBPort==i) return;
     yigAPort = i;
     sender->GetSerial()->println(i);
-    yigAControl = (freq-yp.a.offset[i])/yp.a.slope[i];
+    yigAControl = freq*yp.a.slope[i]+yp.a.offset[i];
     //sender->GetSerial()->println((freq-yp.a.offset)/yp.a.slope[i]);
     if(primChan == 'A'){
       relayAState=i+1;

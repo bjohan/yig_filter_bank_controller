@@ -72,24 +72,24 @@ class YigChannel:
     def writeFilterSlope(self, i, f):
         if i not in range(8):
             raise ValueError("Illegal filter index, must be 0..7")
-        self.dev.write(b"COEF %s S %d %f\n"%(self.designation, i, f))
+        self.dev.write(b"COEF %s S %d %.15f\n"%(self.designation, i, f))
 
     def writeFilterOffset(self, i, offset):
         if i not in range(8):
             raise ValueError("Illegal filter index, must be 0..7")
         #if offset not in range(-32768, 32768):
         #    raise ValueError("Illegal offset %d, must be -32768..32767"%(value))
-        self.dev.write(b"COEF %s O %d %f\n"%(self.designation, i, offset))
+        self.dev.write(b"COEF %s O %d %.10f\n"%(self.designation, i, offset))
 
     def writeFilterLowLim(self, i, f):
         if i not in range(8):
             raise ValueError("Illegal filter index, must be 0..7")
-        self.dev.write(b"COEF %s L %d %f\n"%(self.designation, i, f))
+        self.dev.write(b"COEF %s L %d %.5f\n"%(self.designation, i, f))
 
     def writeFilterHighLim(self, i, f):
         if i not in range(8):
             raise ValueError("Illegal filter index, must be 0..7")
-        self.dev.write(b"COEF %s H %d %f\n"%(self.designation, i, f))
+        self.dev.write(b"COEF %s H %d %.5f\n"%(self.designation, i, f))
 
     def save(self):
         self.dev.write(b"M S\n")
@@ -108,8 +108,8 @@ class YigChannel:
 
 class YigController:
     def __init__(self, dev):
-        #self.dev=SerialWrap(serial.Serial(dev, 115200, timeout=1));
-        self.dev=serial.Serial(dev, 115200, timeout=1);
+        self.dev=SerialWrap(serial.Serial(dev, 115200, timeout=1));
+        #self.dev=serial.Serial(dev, 115200, timeout=1);
         self.waitForBoot()
         self.switchA=Switch(self.dev, b'A')
         self.switchB=Switch(self.dev, b'B')
