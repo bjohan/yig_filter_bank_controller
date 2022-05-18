@@ -97,23 +97,23 @@ int calculateTuningWordB(int filtNum, float freq){
 
 
 void cmd_status(SerialCommands* sender, const char* cmd){
-  sender->GetSerial()->print("Relay A: ");
+  sender->GetSerial()->print(F("Relay A: "));
   sender->GetSerial()->print(relayAState);
   sender->GetSerial()->println("");
   
-  sender->GetSerial()->print("Relay B: ");
+  sender->GetSerial()->print(F("Relay B: "));
   sender->GetSerial()->print(relayAState);
   sender->GetSerial()->println("");
 
-  sender->GetSerial()->print("YIG driver A channel: ");
+  sender->GetSerial()->print(F("YIG driver A channel: "));
   sender->GetSerial()->print(yigAPort);
-  sender->GetSerial()->print(" value: ");
+  sender->GetSerial()->print(F(" value: "));
   sender->GetSerial()->print(yigAControl);
   sender->GetSerial()->println("");
 
-  sender->GetSerial()->print("YIG driver B channel: ");
+  sender->GetSerial()->print(F("YIG driver B channel: "));
   sender->GetSerial()->print(yigBPort);
-  sender->GetSerial()->print(" value: ");
+  sender->GetSerial()->print(F(" value: "));
   sender->GetSerial()->print(yigBControl);
   sender->GetSerial()->println("");
   
@@ -127,19 +127,21 @@ void cmd_unrecognized(SerialCommands* sender, const char* cmd)
 }
 
 void cmd_switch(SerialCommands* sender){
+
+
   char *which_rel=sender->Next();
   if(which_rel == NULL) {
-    sender->GetSerial()->println("No relay specified, first argument must be 'A' or 'B'");
+    sender->GetSerial()->println(F("No relay specified, first argument must be 'A' or 'B'"));
     return;
   }
   char *which_port=sender->Next();
   if(which_port == NULL){
-    sender->GetSerial()->println("No port specified, second argument must be [0..6]");
+    sender->GetSerial()->println(F("No port specified, second argument must be [0..6]"));
     return;
   }
   int portNum=atoi(which_port);
   if(portNum < 0 || portNum > 6){
-    sender->GetSerial()->println("Wrong port specified, second argument must be [0..6]");
+    sender->GetSerial()->println(F("Wrong port specified, second argument must be [0..6]"));
     return;
   }
   if(which_rel[0]=='A' ||which_rel[0]=='a'){
@@ -149,39 +151,40 @@ void cmd_switch(SerialCommands* sender){
     relayBState=portNum;
     updateRelays();
   } else {
-    sender->GetSerial()->println("Wrong relay specified, first argument must be 'A' or 'B'");
+    sender->GetSerial()->println(F("Wrong relay specified, first argument must be 'A' or 'B'"));
     return;
   }
 }
 
 void cmd_yig(SerialCommands* sender){
   char *which_driver=sender->Next();
+
   if(which_driver == NULL) {
-    sender->GetSerial()->println("No driver specified, first argument must be 'A' or 'B'");
+    sender->GetSerial()->println(F("No driver specified, first argument must be 'A' or 'B'"));
     return;
   }
   char *which_yig=sender->Next();
   if(which_yig == NULL){
-    sender->GetSerial()->println("No port specified, second argument must be [0..7]");
+    sender->GetSerial()->println(F("No port specified, second argument must be [0..7]"));
     return;
   }
   int yigNum=atoi(which_yig);
   if(yigNum < 0 || yigNum > 7){
-    sender->GetSerial()->println("Wrong port specified, second argument must be [0..7]");
+    sender->GetSerial()->println(F("Wrong port specified, second argument must be [0..7]"));
     return;
   }
 
 
   char *yig_ctrl_str=sender->Next();
   if(yig_ctrl_str == NULL){
-    sender->GetSerial()->println("No control word specified, third argument must be [-32768..32767]");
+    sender->GetSerial()->println(F("No control word specified, third argument must be [-32768..32767]"));
     return;
   }
   int yigControl=atoi(yig_ctrl_str);
   
   if(which_driver[0]=='A' ||which_driver[0]=='a'){
     if(yigBPort==yigNum){
-      sender->GetSerial()->println("Driver B already controls commanded port");
+      sender->GetSerial()->println(F("Driver B already controls commanded port"));
       return;
     }
     yigAPort=yigNum;
@@ -189,14 +192,14 @@ void cmd_yig(SerialCommands* sender){
     updateYigs();
   } else if(which_driver[0]=='B' ||which_driver[0]=='b'){
     if(yigAPort==yigNum){
-      sender->GetSerial()->println("Driver A already controls commanded port");
+      sender->GetSerial()->println(F("Driver A already controls commanded port"));
       return;
     }
     yigBPort=yigNum;
     yigBControl=yigControl;
     updateYigs();
   } else {
-    sender->GetSerial()->println("Wrong driver specified, first argument must be 'A' or 'B'");
+    sender->GetSerial()->println(F("Wrong driver specified, first argument must be 'A' or 'B'"));
     return;
   }
 }
@@ -261,38 +264,31 @@ void cmd_coeff(SerialCommands *sender){
 
 
 void cmd_print_coeff(SerialCommands *sender){
-  const char cha[] PROGMEM = "Channel A";
-  const char chb[] PROGMEM = "Channel B";
-  const char msg1[] PROGMEM = " Slope: ";
-  const char msg2[] PROGMEM = " [MHz/LSB] Offset: ";
-  const char msg3[] PROGMEM = " [LSB] FrequencyLow: ";
-  const char msg4[] PROGMEM = " [MHz] FrequencyHigh: ";
-  const char msg5[] PROGMEM = " [MHz]";
   for(int i = 0 ; i < 8 ; i++){
-    sender->GetSerial()->print(cha);
+    sender->GetSerial()->print(F("Channel A "));
     sender->GetSerial()->print(i);
-    sender->GetSerial()->print(msg1);
+    sender->GetSerial()->print(F(" Slope: "));
     sender->GetSerial()->print(yp.a.slope[i]*1e-6);
-    sender->GetSerial()->print(msg2);
+    sender->GetSerial()->print(F(" [MHz/LSB] Offset: "));
     sender->GetSerial()->print(yp.a.offset[i]);
-    sender->GetSerial()->print(msg3);
+    sender->GetSerial()->print(F(" [LSB] FrequencyLow: "));
     sender->GetSerial()->print(yp.a.lowLim[i]*1e-6);
-    sender->GetSerial()->print(msg4);
+    sender->GetSerial()->print(F(" [MHz] FrequencyHigh: "));
     sender->GetSerial()->print(yp.a.highLim[i]*1e-6);
-    sender->GetSerial()->println(msg5);
+    sender->GetSerial()->println(F(" [MHz]"));
   }
     for(int i = 0 ; i < 8 ; i++){
-    sender->GetSerial()->print(chb);
+    sender->GetSerial()->print(F("Channel B "));
     sender->GetSerial()->print(i);
-    sender->GetSerial()->print(msg1);
+    sender->GetSerial()->print(F(" Slope: "));
     sender->GetSerial()->print(yp.b.slope[i]*1e-6);
-    sender->GetSerial()->print(msg2);
+    sender->GetSerial()->print(F(" [MHz/LSB] Offset: "));
     sender->GetSerial()->print(yp.b.offset[i]);
-    sender->GetSerial()->print(msg3);
+    sender->GetSerial()->print(F(" [LSB] FrequencyLow: "));
     sender->GetSerial()->print(yp.b.lowLim[i]*1e-6);
-    sender->GetSerial()->print(msg4);
+    sender->GetSerial()->print(F(" [MHz] FrequencyHigh: "));
     sender->GetSerial()->print(yp.b.highLim[i]*1e-6);
-    sender->GetSerial()->println(msg5);
+    sender->GetSerial()->println(F(" [MHz]"));
   }
 }
 
@@ -348,6 +344,17 @@ void cmd_tune(SerialCommands *sender){
   sender->GetSerial()->println("OK");
 }
 
+void cmd_prim(SerialCommands *sender){
+  char *c=sender->Next();
+  const static char usage[] PROGMEM = "A or B for primary channel";
+  if(c == 'A' or c == 'a')
+    primChan='A';
+  else if (c == 'B' or c == 'b')
+    primChan='B';
+  else
+    sender->GetSerial()->println(usage);
+}
+
 void saveCoeff(){
   EEPROM.put(0, yp);
 }
@@ -358,17 +365,17 @@ void loadCoeff(){
 
 void cmd_mem(SerialCommands *sender){
   char *c = sender->Next();
-  const char usage[] PROGMEM = "S Save or L Load";
+  const static char usage[] PROGMEM = "S Save or L Load";
   if(c==NULL){
     sender->GetSerial()->println(usage);
     return;
   }
   if(c[0] == 'S'){
     saveCoeff();
-    sender->GetSerial()->println("saved");
+    sender->GetSerial()->println(F("saved"));
   } else if(c[0] == 'L'){
     loadCoeff();
-    sender->GetSerial()->println("loaded");
+    sender->GetSerial()->println(F("loaded"));
   } else{
     sender->GetSerial()->println(usage);
   }
@@ -383,6 +390,7 @@ SerialCommand cmd_print_coeff_("PC", cmd_print_coeff);
 SerialCommand cmd_s_("S", cmd_status);
 SerialCommand cmd_tune_to_("T", cmd_tune);
 SerialCommand cmd_mem_("M", cmd_mem);
+SerialCommand cmd_prim_("P", cmd_prim);
 
 void setup() {
   // call this last if you are setting up other things
@@ -417,6 +425,7 @@ void setup() {
   serial_commands_.AddCommand(&cmd_print_coeff_);
   serial_commands_.AddCommand(&cmd_mem_);
   serial_commands_.AddCommand(&cmd_tune_to_);
+  serial_commands_.AddCommand(&cmd_prim_);
   //AudioCodec_init();
   //codec= new Wm8731(10);
   Serial.println("INIT DONE");
