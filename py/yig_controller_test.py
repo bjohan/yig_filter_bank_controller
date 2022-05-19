@@ -108,8 +108,8 @@ class YigChannel:
 
 class YigController:
     def __init__(self, dev):
-        self.dev=SerialWrap(serial.Serial(dev, 115200, timeout=1));
-        #self.dev=serial.Serial(dev, 115200, timeout=1);
+        #self.dev=SerialWrap(serial.Serial(dev, 115200, timeout=1));
+        self.dev=serial.Serial(dev, 115200, timeout=1);
         self.waitForBoot()
         self.switchA=Switch(self.dev, b'A')
         self.switchB=Switch(self.dev, b'B')
@@ -131,6 +131,8 @@ class YigController:
                 break
         print('Done')
 
+    def tune(self, f):
+        self.dev.write(b"T A %.2f\n"%(f))
 
     def parseStatusLine(self, line):
         parsed=False;
