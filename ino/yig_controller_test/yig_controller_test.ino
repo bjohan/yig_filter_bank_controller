@@ -73,13 +73,13 @@ void updateRelays(){
 
 
 void updateYigs(){
-  digitalWrite(yigAMux0Pin, yigAPort&0x1);
-  digitalWrite(yigAMux1Pin, yigAPort&0x2);
-  digitalWrite(yigAMux2Pin, yigAPort&0x4);
+  digitalWrite(yigAMux0Pin, (~yigAPort)&0x1);
+  digitalWrite(yigAMux1Pin, (~yigAPort)&0x2);
+  digitalWrite(yigAMux2Pin, (~yigAPort)&0x4);
 
-  digitalWrite(yigBMux0Pin, yigBPort&0x1);
-  digitalWrite(yigBMux1Pin, yigBPort&0x2);
-  digitalWrite(yigBMux2Pin, yigBPort&0x4);
+  digitalWrite(yigBMux0Pin, (~yigBPort)&0x1);
+  digitalWrite(yigBMux1Pin, (~yigBPort)&0x2);
+  digitalWrite(yigBMux2Pin, (~yigBPort)&0x4);
 
   int left_in, right_in;
   AudioCodec_data(&left_in, &right_in, yigAControl, yigBControl);
