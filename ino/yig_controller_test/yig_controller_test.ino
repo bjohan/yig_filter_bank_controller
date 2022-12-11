@@ -121,7 +121,7 @@ void cmd_status(SerialCommands* sender, const char* cmd){
 
 void cmd_unrecognized(SerialCommands* sender, const char* cmd)
 {
-  sender->GetSerial()->print("Unrecognized command [");
+  sender->GetSerial()->print(F("Unrecognized command ["));
   sender->GetSerial()->print(cmd);
   sender->GetSerial()->println("]");
 }
@@ -131,17 +131,17 @@ void cmd_switch(SerialCommands* sender){
 
   char *which_rel=sender->Next();
   if(which_rel == NULL) {
-    sender->GetSerial()->println(F("No relay specified, first argument must be 'A' or 'B'"));
+    sender->GetSerial()->println(F("No relay specified, 1st argument must be 'A' or 'B'"));
     return;
   }
   char *which_port=sender->Next();
   if(which_port == NULL){
-    sender->GetSerial()->println(F("No port specified, second argument must be [0..6]"));
+    sender->GetSerial()->println(F("No port specified, 2nd argument must be [0..6]"));
     return;
   }
   int portNum=atoi(which_port);
   if(portNum < 0 || portNum > 6){
-    sender->GetSerial()->println(F("Wrong port specified, second argument must be [0..6]"));
+    sender->GetSerial()->println(F("Wrong port specified, 2nd argument must be [0..6]"));
     return;
   }
   if(which_rel[0]=='A' ||which_rel[0]=='a'){
@@ -151,7 +151,7 @@ void cmd_switch(SerialCommands* sender){
     relayBState=portNum;
     updateRelays();
   } else {
-    sender->GetSerial()->println(F("Wrong relay specified, first argument must be 'A' or 'B'"));
+    sender->GetSerial()->println(F("Wrong relay specified, 1st argument must be 'A' or 'B'"));
     return;
   }
 }
@@ -160,24 +160,24 @@ void cmd_yig(SerialCommands* sender){
   char *which_driver=sender->Next();
 
   if(which_driver == NULL) {
-    sender->GetSerial()->println(F("No driver specified, first argument must be 'A' or 'B'"));
+    sender->GetSerial()->println(F("No driver specified, 1st argument must be 'A' or 'B'"));
     return;
   }
   char *which_yig=sender->Next();
   if(which_yig == NULL){
-    sender->GetSerial()->println(F("No port specified, second argument must be [0..7]"));
+    sender->GetSerial()->println(F("No port specified, 2nd argument must be [0..7]"));
     return;
   }
   int yigNum=atoi(which_yig);
   if(yigNum < 0 || yigNum > 7){
-    sender->GetSerial()->println(F("Wrong port specified, second argument must be [0..7]"));
+    sender->GetSerial()->println(F("Wrong port specified, 2nd argument must be [0..7]"));
     return;
   }
 
 
   char *yig_ctrl_str=sender->Next();
   if(yig_ctrl_str == NULL){
-    sender->GetSerial()->println(F("No control word specified, third argument must be [-32768..32767]"));
+    sender->GetSerial()->println(F("No control word specified, 3rd argument must be [-32768..32767]"));
     return;
   }
   int yigControl=atoi(yig_ctrl_str);
@@ -199,7 +199,7 @@ void cmd_yig(SerialCommands* sender){
     yigBControl=yigControl;
     updateYigs();
   } else {
-    sender->GetSerial()->println(F("Wrong driver specified, first argument must be 'A' or 'B'"));
+    sender->GetSerial()->println(F("Wrong driver specified, 1st argument must be 'A' or 'B'"));
     return;
   }
 }
@@ -397,7 +397,7 @@ void setup() {
   AudioCodec_init(); // setup codec and microcontroller registers
   Serial.begin(115200); // Begin serial communications for radio tansmitter
   
-  Serial.println("INIT STARTED");
+  Serial.println(F("INIT OF YIG CONTROLLER STARTED"));
   pinMode(A4, OUTPUT);
   pinMode(A5, OUTPUT);
   pinMode(yigAMux0Pin, OUTPUT);
@@ -428,7 +428,7 @@ void setup() {
   serial_commands_.AddCommand(&cmd_prim_);
   //AudioCodec_init();
   //codec= new Wm8731(10);
-  Serial.println("INIT DONE");
+  Serial.println(F("INIT DONE"));
 }
 
 
