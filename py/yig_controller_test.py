@@ -131,8 +131,9 @@ class YigController:
                 break
         print('Done')
 
-    def tune(self, f):
-        self.dev.write(b"T A %.2f\n"%(f))
+    def tune(self, f, ch = b'A'):
+        #self.dev.write(b"P %s"%(ch))
+        self.dev.write(b"T %s %.2f\n"%(ch, f))
 
     def parseStatusLine(self, line):
         parsed=False;

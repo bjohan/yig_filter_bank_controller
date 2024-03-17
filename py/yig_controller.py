@@ -103,8 +103,9 @@ class YigController:
                 break
         print('Done')
 
-    def tune(self, f):
-        self.dev.write(b"T A %.2f\n"%(f))
+    def tune(self, f, ch = 'A'):
+        self.dev.write(("P %s\n"%(ch)).encode('ascii'))
+        self.dev.write(("T %s %.2f\n"%(ch, f)).encode('ascii'))
 
     def parseStatusLine(self, line):
         parsed=False;
@@ -146,5 +147,5 @@ if __name__ == "__main__":
 
     yc = YigController(args.port)
     if args.tune:
-        yc.tune(args.tune)
+        yc.tune(args.tune, 'B')
         print("Tuned to %0.2f GHz"%(args.tune/1e9))
