@@ -96,7 +96,7 @@ int calculateTuningWordB(int filtNum, float freq){
 }
 
 
-void cmd_status(SerialCommands* sender, const char* cmd){
+void cmd_status(SerialCommands* sender){//, const char* cmd){
   sender->GetSerial()->print(F("Relay A: "));
   sender->GetSerial()->print(relayAState);
   sender->GetSerial()->println("");
@@ -105,7 +105,6 @@ void cmd_status(SerialCommands* sender, const char* cmd){
   sender->GetSerial()->print(relayAState);
   sender->GetSerial()->println("");
 
-  sender->GetSerial()->print(F("YIG driver A channel: "));
   sender->GetSerial()->print(yigAPort);
   sender->GetSerial()->print(F(" value: "));
   sender->GetSerial()->print(yigAControl);
@@ -127,8 +126,6 @@ void cmd_unrecognized(SerialCommands* sender, const char* cmd)
 }
 
 void cmd_switch(SerialCommands* sender){
-
-
   char *which_rel=sender->Next();
   if(which_rel == NULL) {
     sender->GetSerial()->println(F("No relay specified, 1st argument must be 'A' or 'B'"));
@@ -259,7 +256,7 @@ void cmd_coeff(SerialCommands *sender){
   } else {
     sender->GetSerial()->println(usage);
   }
-  sender->GetSerial()->println("OK");
+  sender->GetSerial()->println(F("OK"));
 }
 
 
@@ -347,9 +344,9 @@ void cmd_tune(SerialCommands *sender){
 void cmd_prim(SerialCommands *sender){
   char *c=sender->Next();
   const static char usage[] PROGMEM = "A or B for primary channel";
-  if(c == 'A' or c == 'a')
+  if(*c == 'A' or *c == 'a')
     primChan='A';
-  else if (c == 'B' or c == 'b')
+  else if (*c == 'B' or *c == 'b')
     primChan='B';
   else
     sender->GetSerial()->println(usage);
