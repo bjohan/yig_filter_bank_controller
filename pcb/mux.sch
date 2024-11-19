@@ -1,0 +1,682 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 4xxx:4051 U5
+U 1 1 61AFEEE4
+P 2550 1500
+F 0 "U5" H 3094 1546 50  0000 L CNN
+F 1 "4051" H 3094 1455 50  0000 L CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 2550 1500 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4051bms-52bms-53bms.pdf" H 2550 1500 50  0001 C CNN
+	1    2550 1500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0148
+U 1 1 61B0EB36
+P 2550 2400
+F 0 "#PWR0148" H 2550 2150 50  0001 C CNN
+F 1 "GND" H 2555 2227 50  0000 C CNN
+F 2 "" H 2550 2400 50  0001 C CNN
+F 3 "" H 2550 2400 50  0001 C CNN
+	1    2550 2400
+	-1   0    0    -1  
+$EndComp
+Text HLabel 2550 500  2    50   Input ~ 0
+VPOS
+Text HLabel 2450 2500 0    50   Input ~ 0
+VNEG
+$Comp
+L 4xxx:4051 U4
+U 1 1 61B0F5AF
+P 2500 4400
+F 0 "U4" H 3044 4446 50  0000 L CNN
+F 1 "4051" H 3044 4355 50  0000 L CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 2500 4400 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4051bms-52bms-53bms.pdf" H 2500 4400 50  0001 C CNN
+	1    2500 4400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0149
+U 1 1 61B0F611
+P 2500 5300
+F 0 "#PWR0149" H 2500 5050 50  0001 C CNN
+F 1 "GND" H 2505 5127 50  0000 C CNN
+F 2 "" H 2500 5300 50  0001 C CNN
+F 3 "" H 2500 5300 50  0001 C CNN
+	1    2500 5300
+	-1   0    0    -1  
+$EndComp
+Text HLabel 2500 3400 2    50   Input ~ 0
+VPOS
+Text HLabel 2400 5400 0    50   Input ~ 0
+VNEG
+Wire Wire Line
+	3300 2100 3300 2700
+Wire Wire Line
+	3400 2000 3400 2800
+Wire Wire Line
+	3500 1900 3500 2900
+Wire Wire Line
+	3600 1800 3600 3000
+Wire Wire Line
+	3300 2100 3050 2100
+Wire Wire Line
+	3050 2000 3400 2000
+Wire Wire Line
+	3050 1900 3500 1900
+Wire Wire Line
+	3050 1800 3600 1800
+Wire Wire Line
+	3000 3800 3800 3800
+Wire Wire Line
+	3000 3900 3900 3900
+Wire Wire Line
+	3000 4000 4000 4000
+Wire Wire Line
+	3000 4100 4100 4100
+Wire Wire Line
+	3000 4200 4200 4200
+Wire Wire Line
+	3000 4300 4300 4300
+Wire Wire Line
+	3000 4400 4400 4400
+Wire Wire Line
+	3000 4500 4500 4500
+Wire Wire Line
+	3250 5000 3250 5600
+Wire Wire Line
+	3350 4900 3350 5700
+Wire Wire Line
+	3450 4800 3450 5800
+Wire Wire Line
+	3550 4700 3550 5900
+Wire Wire Line
+	3250 5000 3000 5000
+Wire Wire Line
+	3000 4900 3350 4900
+Wire Wire Line
+	3000 4800 3450 4800
+Wire Wire Line
+	3000 4700 3550 4700
+Text HLabel 1750 2700 0    50   Input ~ 0
+MUX1_A
+Text HLabel 1750 2800 0    50   Input ~ 0
+MUX1_B
+Text HLabel 1750 2900 0    50   Input ~ 0
+MUX1_C
+Text HLabel 1950 900  0    50   Input ~ 0
+MUX1_GATE_IN
+Text HLabel 1900 3800 0    50   Input ~ 0
+MUX2_GATE_IN
+Text HLabel 1400 5600 0    50   Input ~ 0
+MUX2_A
+Text HLabel 1400 5700 0    50   Input ~ 0
+MUX2_B
+Text HLabel 1400 5800 0    50   Input ~ 0
+MUX2_C
+Wire Wire Line
+	3250 5600 1400 5600
+Wire Wire Line
+	1400 5700 3350 5700
+Wire Wire Line
+	1400 5800 3450 5800
+Wire Wire Line
+	1900 3800 2000 3800
+Wire Wire Line
+	1950 900  2050 900 
+Wire Wire Line
+	2550 500  2550 600 
+Wire Wire Line
+	2450 2400 2450 2500
+Wire Wire Line
+	2500 3400 2500 3500
+Wire Wire Line
+	2400 5300 2400 5400
+Wire Wire Line
+	3300 2700 1750 2700
+Wire Wire Line
+	3400 2800 1750 2800
+Wire Wire Line
+	3500 2900 1750 2900
+Text HLabel 4850 900  2    50   Output ~ 0
+MUXED_GATE_1
+Text HLabel 4850 1000 2    50   Output ~ 0
+MUXED_GATE_2
+Text HLabel 4850 1100 2    50   Output ~ 0
+MUXED_GATE_3
+Text HLabel 4850 1200 2    50   Output ~ 0
+MUXED_GATE_4
+Text HLabel 4850 1300 2    50   Output ~ 0
+MUXED_GATE_5
+Text HLabel 4850 1400 2    50   Output ~ 0
+MUXED_GATE_6
+Text HLabel 4850 1500 2    50   Output ~ 0
+MUXED_GATE_7
+Text HLabel 4850 1600 2    50   Output ~ 0
+MUXED_GATE_8
+$Comp
+L 4xxx:4051 U7
+U 1 1 61B6B12C
+P 7350 1500
+F 0 "U7" H 7200 2250 50  0000 L CNN
+F 1 "4051" H 7100 750 50  0000 L CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 7350 1500 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4051bms-52bms-53bms.pdf" H 7350 1500 50  0001 C CNN
+	1    7350 1500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0150
+U 1 1 61B6B1BE
+P 7350 2400
+F 0 "#PWR0150" H 7350 2150 50  0001 C CNN
+F 1 "GND" H 7355 2227 50  0000 C CNN
+F 2 "" H 7350 2400 50  0001 C CNN
+F 3 "" H 7350 2400 50  0001 C CNN
+	1    7350 2400
+	-1   0    0    -1  
+$EndComp
+Text HLabel 7350 500  2    50   Input ~ 0
+VPOS
+Text HLabel 7250 2500 0    50   Input ~ 0
+VNEG
+$Comp
+L 4xxx:4051 U6
+U 1 1 61B6B1CA
+P 7300 4400
+F 0 "U6" H 7100 5150 50  0000 L CNN
+F 1 "4051" H 7050 3650 50  0000 L CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 7300 4400 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4051bms-52bms-53bms.pdf" H 7300 4400 50  0001 C CNN
+	1    7300 4400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0151
+U 1 1 61B6B1D4
+P 7300 5300
+F 0 "#PWR0151" H 7300 5050 50  0001 C CNN
+F 1 "GND" H 7305 5127 50  0000 C CNN
+F 2 "" H 7300 5300 50  0001 C CNN
+F 3 "" H 7300 5300 50  0001 C CNN
+	1    7300 5300
+	-1   0    0    -1  
+$EndComp
+Text HLabel 7300 3400 2    50   Input ~ 0
+VPOS
+Text HLabel 7200 5400 0    50   Input ~ 0
+VNEG
+Wire Wire Line
+	8100 2100 8100 2700
+Wire Wire Line
+	8200 2000 8200 2800
+Wire Wire Line
+	8300 1900 8300 2900
+Wire Wire Line
+	8400 1800 8400 3000
+Wire Wire Line
+	8100 2100 7850 2100
+Wire Wire Line
+	7850 2000 8200 2000
+Wire Wire Line
+	7850 1900 8300 1900
+Wire Wire Line
+	7850 1800 8400 1800
+Wire Wire Line
+	7800 3800 8600 3800
+Wire Wire Line
+	7800 3900 8700 3900
+Wire Wire Line
+	7800 4000 8800 4000
+Wire Wire Line
+	7800 4100 8900 4100
+Wire Wire Line
+	7800 4200 9000 4200
+Wire Wire Line
+	7800 4300 9100 4300
+Wire Wire Line
+	7800 4400 9200 4400
+Wire Wire Line
+	7800 4500 9300 4500
+Wire Wire Line
+	8050 5000 8050 5600
+Wire Wire Line
+	8150 4900 8150 5700
+Wire Wire Line
+	8250 4800 8250 5800
+Wire Wire Line
+	8350 4700 8350 5900
+Wire Wire Line
+	8050 5000 7800 5000
+Wire Wire Line
+	7800 4900 8150 4900
+Wire Wire Line
+	7800 4800 8250 4800
+Wire Wire Line
+	7800 4700 8350 4700
+Text HLabel 5650 1750 0    50   Input ~ 0
+MUX1_FEEDBACK_OUT
+Text HLabel 5550 4450 0    50   Input ~ 0
+MUX2_FEEDBACK_OUT
+Wire Wire Line
+	6700 3800 6800 3800
+Wire Wire Line
+	6750 900  6850 900 
+Wire Wire Line
+	7350 500  7350 600 
+Wire Wire Line
+	7250 2400 7250 2500
+Wire Wire Line
+	7300 3400 7300 3500
+Wire Wire Line
+	7200 5300 7200 5400
+Text HLabel 9650 900  2    50   Output ~ 0
+FEEDBACK_IN_1
+Text HLabel 9650 1000 2    50   Output ~ 0
+FEEDBACK_IN_2
+Text HLabel 9650 1100 2    50   Output ~ 0
+FEEDBACK_IN_3
+Text HLabel 9650 1200 2    50   Output ~ 0
+FEEDBACK_IN_4
+Text HLabel 9650 1300 2    50   Output ~ 0
+FEEDBACK_IN_5
+Text HLabel 9650 1400 2    50   Output ~ 0
+FEEDBACK_IN_6
+Text HLabel 9650 1500 2    50   Output ~ 0
+FEEDBACK_IN_7
+Text HLabel 9650 1600 2    50   Output ~ 0
+FEEDBACK_IN_8
+Wire Wire Line
+	3300 2700 8100 2700
+Connection ~ 3300 2700
+Wire Wire Line
+	3400 2800 8200 2800
+Connection ~ 3400 2800
+Wire Wire Line
+	3500 2900 8300 2900
+Connection ~ 3500 2900
+Wire Wire Line
+	3600 3000 8400 3000
+Wire Wire Line
+	3250 5600 8050 5600
+Connection ~ 3250 5600
+Wire Wire Line
+	3350 5700 8150 5700
+Connection ~ 3350 5700
+Wire Wire Line
+	3450 5800 8250 5800
+Connection ~ 3450 5800
+Wire Wire Line
+	3550 5900 8350 5900
+$Comp
+L Device:R R40
+U 1 1 61DEB5D4
+P 3200 3000
+F 0 "R40" V 2993 3000 50  0000 C CNN
+F 1 "R" V 3084 3000 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3130 3000 50  0001 C CNN
+F 3 "~" H 3200 3000 50  0001 C CNN
+	1    3200 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R41
+U 1 1 61DEB972
+P 3200 5900
+F 0 "R41" V 2993 5900 50  0000 C CNN
+F 1 "R" V 3084 5900 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 3130 5900 50  0001 C CNN
+F 3 "~" H 3200 5900 50  0001 C CNN
+	1    3200 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0161
+U 1 1 61DEBD6A
+P 2900 3000
+F 0 "#PWR0161" H 2900 2750 50  0001 C CNN
+F 1 "GND" H 2905 2827 50  0000 C CNN
+F 2 "" H 2900 3000 50  0001 C CNN
+F 3 "" H 2900 3000 50  0001 C CNN
+	1    2900 3000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0162
+U 1 1 61DEBF8E
+P 2900 5900
+F 0 "#PWR0162" H 2900 5650 50  0001 C CNN
+F 1 "GND" H 2905 5727 50  0000 C CNN
+F 2 "" H 2900 5900 50  0001 C CNN
+F 3 "" H 2900 5900 50  0001 C CNN
+	1    2900 5900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 3000 3350 3000
+Connection ~ 3600 3000
+Wire Wire Line
+	3050 3000 2900 3000
+Wire Wire Line
+	3550 5900 3350 5900
+Connection ~ 3550 5900
+Wire Wire Line
+	3050 5900 2900 5900
+Wire Wire Line
+	3050 1600 4500 1600
+Wire Wire Line
+	3050 1500 4400 1500
+Wire Wire Line
+	3050 1400 4300 1400
+Wire Wire Line
+	3050 1300 4200 1300
+Wire Wire Line
+	3050 1200 4100 1200
+Wire Wire Line
+	3050 1100 4000 1100
+Wire Wire Line
+	3050 1000 3900 1000
+Wire Wire Line
+	3050 900  3800 900 
+Wire Wire Line
+	7850 1600 9300 1600
+Wire Wire Line
+	7850 1500 9200 1500
+Wire Wire Line
+	7850 1400 9100 1400
+Wire Wire Line
+	7850 1300 9000 1300
+Wire Wire Line
+	7850 1200 8900 1200
+Wire Wire Line
+	7850 1100 8800 1100
+Wire Wire Line
+	7850 1000 8700 1000
+Wire Wire Line
+	7850 900  8600 900 
+Wire Wire Line
+	8600 3800 8600 900 
+Connection ~ 8600 900 
+Wire Wire Line
+	8600 900  9650 900 
+Wire Wire Line
+	8700 3900 8700 1000
+Connection ~ 8700 1000
+Wire Wire Line
+	8700 1000 9650 1000
+Wire Wire Line
+	8800 1100 8800 4000
+Connection ~ 8800 1100
+Wire Wire Line
+	8800 1100 9650 1100
+Wire Wire Line
+	8900 4100 8900 1200
+Connection ~ 8900 1200
+Wire Wire Line
+	8900 1200 9650 1200
+Wire Wire Line
+	9000 1300 9000 4200
+Connection ~ 9000 1300
+Wire Wire Line
+	9000 1300 9650 1300
+Wire Wire Line
+	9100 4300 9100 1400
+Connection ~ 9100 1400
+Wire Wire Line
+	9100 1400 9650 1400
+Wire Wire Line
+	9200 1500 9200 4400
+Connection ~ 9200 1500
+Wire Wire Line
+	9200 1500 9650 1500
+Wire Wire Line
+	9300 4500 9300 1600
+Connection ~ 9300 1600
+Wire Wire Line
+	9300 1600 9650 1600
+Wire Wire Line
+	3800 3800 3800 900 
+Connection ~ 3800 900 
+Wire Wire Line
+	3800 900  4850 900 
+Wire Wire Line
+	3900 1000 3900 3900
+Connection ~ 3900 1000
+Wire Wire Line
+	3900 1000 4850 1000
+Wire Wire Line
+	4000 4000 4000 1100
+Connection ~ 4000 1100
+Wire Wire Line
+	4000 1100 4850 1100
+Wire Wire Line
+	4100 1200 4100 4100
+Connection ~ 4100 1200
+Wire Wire Line
+	4100 1200 4850 1200
+Wire Wire Line
+	4200 4200 4200 1300
+Connection ~ 4200 1300
+Wire Wire Line
+	4200 1300 4850 1300
+Wire Wire Line
+	4300 1400 4300 4300
+Connection ~ 4300 1400
+Wire Wire Line
+	4300 1400 4850 1400
+Wire Wire Line
+	4400 4400 4400 1500
+Connection ~ 4400 1500
+Wire Wire Line
+	4400 1500 4850 1500
+Wire Wire Line
+	4500 1600 4500 4500
+Connection ~ 4500 1600
+Wire Wire Line
+	4500 1600 4850 1600
+$Comp
+L Amplifier_Operational:LM358 U15
+U 2 1 62270933
+P 6050 4450
+F 0 "U15" H 6050 4817 50  0000 C CNN
+F 1 "DIO2092" H 6050 4726 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6050 4450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 6050 4450 50  0001 C CNN
+	2    6050 4450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U15
+U 3 1 622715AA
+P 5850 3400
+F 0 "U15" V 5945 3400 50  0000 C CNN
+F 1 "DIO2092" V 5854 3400 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5850 3400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 5850 3400 50  0001 C CNN
+	3    5850 3400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R55
+U 1 1 6229871E
+P 6150 4800
+F 0 "R55" V 5943 4800 50  0000 C CNN
+F 1 "R" V 6034 4800 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 6080 4800 50  0001 C CNN
+F 3 "~" H 6150 4800 50  0001 C CNN
+	1    6150 4800
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R R57
+U 1 1 622A28AA
+P 6550 4800
+F 0 "R57" V 6343 4800 50  0000 C CNN
+F 1 "R" V 6434 4800 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 6480 4800 50  0001 C CNN
+F 3 "~" H 6550 4800 50  0001 C CNN
+	1    6550 4800
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0193
+U 1 1 622A2D18
+P 6800 4800
+F 0 "#PWR0193" H 6800 4550 50  0001 C CNN
+F 1 "GND" H 6805 4627 50  0000 C CNN
+F 2 "" H 6800 4800 50  0001 C CNN
+F 3 "" H 6800 4800 50  0001 C CNN
+	1    6800 4800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 4800 6350 4800
+Wire Wire Line
+	5750 4450 5750 4800
+Wire Wire Line
+	5750 4800 6000 4800
+Wire Wire Line
+	6800 4800 6700 4800
+Wire Wire Line
+	6350 4800 6350 4550
+Connection ~ 6350 4800
+Wire Wire Line
+	6350 4800 6400 4800
+Wire Wire Line
+	5750 4450 5550 4450
+Connection ~ 5750 4450
+$Comp
+L Device:C C46
+U 1 1 622E7114
+P 6150 5100
+F 0 "C46" V 5898 5100 50  0000 C CNN
+F 1 "C" V 5989 5100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 6188 4950 50  0001 C CNN
+F 3 "~" H 6150 5100 50  0001 C CNN
+	1    6150 5100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6300 4800 6300 5100
+Connection ~ 6300 4800
+Wire Wire Line
+	6000 5100 6000 4800
+Connection ~ 6000 4800
+$Comp
+L power:GND #PWR0194
+U 1 1 622F8FBD
+P 6250 3500
+F 0 "#PWR0194" H 6250 3250 50  0001 C CNN
+F 1 "GND" H 6255 3327 50  0000 C CNN
+F 2 "" H 6250 3500 50  0001 C CNN
+F 3 "" H 6250 3500 50  0001 C CNN
+	1    6250 3500
+	-1   0    0    -1  
+$EndComp
+Text HLabel 5450 3500 0    50   Input ~ 0
+5V
+Wire Wire Line
+	6250 3500 6150 3500
+Wire Wire Line
+	5550 3500 5450 3500
+$Comp
+L Amplifier_Operational:LM358 U15
+U 1 1 6226FFBA
+P 6200 1750
+F 0 "U15" H 6200 1383 50  0000 C CNN
+F 1 "DIO2092" H 6200 1474 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6200 1750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 6200 1750 50  0001 C CNN
+	1    6200 1750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R56
+U 1 1 623410DB
+P 6300 2100
+F 0 "R56" V 6093 2100 50  0000 C CNN
+F 1 "R" V 6184 2100 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 6230 2100 50  0001 C CNN
+F 3 "~" H 6300 2100 50  0001 C CNN
+	1    6300 2100
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R R58
+U 1 1 623413D1
+P 6700 2100
+F 0 "R58" V 6493 2100 50  0000 C CNN
+F 1 "R" V 6584 2100 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 6630 2100 50  0001 C CNN
+F 3 "~" H 6700 2100 50  0001 C CNN
+	1    6700 2100
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	6450 2100 6500 2100
+Wire Wire Line
+	5900 1750 5900 2100
+Wire Wire Line
+	5900 2100 6150 2100
+Wire Wire Line
+	6500 2100 6500 1850
+Connection ~ 6500 2100
+Wire Wire Line
+	6500 2100 6550 2100
+$Comp
+L Device:C C47
+U 1 1 623413E1
+P 6300 2400
+F 0 "C47" V 6048 2400 50  0000 C CNN
+F 1 "C" V 6139 2400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 6338 2250 50  0001 C CNN
+F 3 "~" H 6300 2400 50  0001 C CNN
+	1    6300 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6450 2100 6450 2400
+Connection ~ 6450 2100
+Wire Wire Line
+	6150 2400 6150 2100
+Connection ~ 6150 2100
+$Comp
+L power:GND #PWR0195
+U 1 1 6234C878
+P 6900 2100
+F 0 "#PWR0195" H 6900 1850 50  0001 C CNN
+F 1 "GND" H 6905 1927 50  0000 C CNN
+F 2 "" H 6900 2100 50  0001 C CNN
+F 3 "" H 6900 2100 50  0001 C CNN
+	1    6900 2100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 3800 6700 4350
+Wire Wire Line
+	6700 4350 6350 4350
+Wire Wire Line
+	6750 900  6750 1650
+Wire Wire Line
+	6750 1650 6500 1650
+Wire Wire Line
+	6850 2100 6900 2100
+Wire Wire Line
+	5900 1750 5650 1750
+Connection ~ 5900 1750
+$EndSCHEMATC

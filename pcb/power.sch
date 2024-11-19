@@ -1,0 +1,755 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Linear:L7805 U?
+U 1 1 61D47F40
+P 5650 2500
+AR Path="/61D47F40" Ref="U?"  Part="1" 
+AR Path="/61D31681/61D47F40" Ref="U8"  Part="1" 
+F 0 "U8" H 5650 2742 50  0000 C CNN
+F 1 "L7805" H 5650 2651 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5675 2350 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 5650 2450 50  0001 C CNN
+	1    5650 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 61D47F4C
+P 7050 3400
+AR Path="/61D47F4C" Ref="C?"  Part="1" 
+AR Path="/61D31681/61D47F4C" Ref="C25"  Part="1" 
+F 0 "C25" H 7168 3446 50  0000 L CNN
+F 1 "CP" H 7168 3355 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x12.5" H 7088 3250 50  0001 C CNN
+F 3 "~" H 7050 3400 50  0001 C CNN
+	1    7050 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61D47F52
+P 6750 3400
+AR Path="/61D47F52" Ref="C?"  Part="1" 
+AR Path="/61D31681/61D47F52" Ref="C22"  Part="1" 
+F 0 "C22" H 6865 3446 50  0000 L CNN
+F 1 "C" H 6865 3355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 6788 3250 50  0001 C CNN
+F 3 "~" H 6750 3400 50  0001 C CNN
+	1    6750 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61D47F58
+P 5250 3400
+AR Path="/61D47F58" Ref="C?"  Part="1" 
+AR Path="/61D31681/61D47F58" Ref="C19"  Part="1" 
+F 0 "C19" H 5365 3446 50  0000 L CNN
+F 1 "C" H 5365 3355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5288 3250 50  0001 C CNN
+F 3 "~" H 5250 3400 50  0001 C CNN
+	1    5250 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61D47F5E
+P 5250 2650
+AR Path="/61D47F5E" Ref="C?"  Part="1" 
+AR Path="/61D31681/61D47F5E" Ref="C18"  Part="1" 
+F 0 "C18" H 5365 2696 50  0000 L CNN
+F 1 "C" H 5365 2605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5288 2500 50  0001 C CNN
+F 3 "~" H 5250 2650 50  0001 C CNN
+	1    5250 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61D47F64
+P 6050 2650
+AR Path="/61D47F64" Ref="C?"  Part="1" 
+AR Path="/61D31681/61D47F64" Ref="C21"  Part="1" 
+F 0 "C21" H 6165 2696 50  0000 L CNN
+F 1 "C" H 6165 2605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 6088 2500 50  0001 C CNN
+F 3 "~" H 6050 2650 50  0001 C CNN
+	1    6050 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 61D47F6A
+P 6350 2650
+AR Path="/61D47F6A" Ref="C?"  Part="1" 
+AR Path="/61D31681/61D47F6A" Ref="C24"  Part="1" 
+F 0 "C24" H 6468 2696 50  0000 L CNN
+F 1 "CP" H 6468 2605 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x12.5" H 6388 2500 50  0001 C CNN
+F 3 "~" H 6350 2650 50  0001 C CNN
+	1    6350 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 61D47F70
+P 4900 2650
+AR Path="/61D47F70" Ref="C?"  Part="1" 
+AR Path="/61D31681/61D47F70" Ref="C15"  Part="1" 
+F 0 "C15" H 5018 2696 50  0000 L CNN
+F 1 "CP" H 5018 2605 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x12.5" H 4938 2500 50  0001 C CNN
+F 3 "~" H 4900 2650 50  0001 C CNN
+	1    4900 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 61D47F76
+P 4900 3400
+AR Path="/61D47F76" Ref="C?"  Part="1" 
+AR Path="/61D31681/61D47F76" Ref="C16"  Part="1" 
+F 0 "C16" H 5018 3446 50  0000 L CNN
+F 1 "CP" H 5018 3355 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x12.5" H 4938 3250 50  0001 C CNN
+F 3 "~" H 4900 3400 50  0001 C CNN
+	1    4900 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 2500 6050 2500
+Connection ~ 6050 2500
+Wire Wire Line
+	6050 2500 5950 2500
+Wire Wire Line
+	5350 2500 5250 2500
+Connection ~ 5250 2500
+Wire Wire Line
+	5250 2500 4900 2500
+Wire Wire Line
+	4900 2800 5250 2800
+Connection ~ 5250 2800
+Wire Wire Line
+	5250 2800 5650 2800
+Connection ~ 5650 2800
+Wire Wire Line
+	5650 2800 5850 2800
+Connection ~ 6050 2800
+Wire Wire Line
+	6050 2800 6350 2800
+Wire Wire Line
+	4900 3550 5100 3550
+Wire Wire Line
+	6750 3550 7050 3550
+Connection ~ 6750 3250
+Wire Wire Line
+	6750 3250 7050 3250
+Wire Wire Line
+	5350 3250 5250 3250
+Connection ~ 5250 3250
+Wire Wire Line
+	5250 3250 4900 3250
+$Comp
+L power:GND #PWR?
+U 1 1 61D47F96
+P 6200 3950
+AR Path="/61D47F96" Ref="#PWR?"  Part="1" 
+AR Path="/61D31681/61D47F96" Ref="#PWR0152"  Part="1" 
+F 0 "#PWR0152" H 6200 3700 50  0001 C CNN
+F 1 "GND" H 6205 3777 50  0000 C CNN
+F 2 "" H 6200 3950 50  0001 C CNN
+F 3 "" H 6200 3950 50  0001 C CNN
+	1    6200 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61D47F9E
+P 5850 2800
+AR Path="/61D47F9E" Ref="#PWR?"  Part="1" 
+AR Path="/61D31681/61D47F9E" Ref="#PWR0153"  Part="1" 
+F 0 "#PWR0153" H 5850 2550 50  0001 C CNN
+F 1 "GND" H 5855 2627 50  0000 C CNN
+F 2 "" H 5850 2800 50  0001 C CNN
+F 3 "" H 5850 2800 50  0001 C CNN
+	1    5850 2800
+	1    0    0    -1  
+$EndComp
+Connection ~ 5850 2800
+Wire Wire Line
+	5850 2800 6050 2800
+Wire Wire Line
+	4700 3250 4700 2500
+Wire Wire Line
+	4700 2500 4900 2500
+Connection ~ 4900 3250
+Connection ~ 4900 2500
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 61D47FAA
+P 3900 1600
+AR Path="/61D47FAA" Ref="J?"  Part="1" 
+AR Path="/61D31681/61D47FAA" Ref="J14"  Part="1" 
+F 0 "J14" H 4008 1781 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 4008 1690 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3900 1600 50  0001 C CNN
+F 3 "~" H 3900 1600 50  0001 C CNN
+	1    3900 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61D47FB0
+P 4800 1900
+AR Path="/61D47FB0" Ref="#PWR?"  Part="1" 
+AR Path="/61D31681/61D47FB0" Ref="#PWR0154"  Part="1" 
+F 0 "#PWR0154" H 4800 1650 50  0001 C CNN
+F 1 "GND" H 4805 1727 50  0000 C CNN
+F 2 "" H 4800 1900 50  0001 C CNN
+F 3 "" H 4800 1900 50  0001 C CNN
+	1    4800 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 1700 4200 1700
+$Comp
+L power:+5V #PWR?
+U 1 1 61D47FB7
+P 6350 2500
+AR Path="/61D47FB7" Ref="#PWR?"  Part="1" 
+AR Path="/61D31681/61D47FB7" Ref="#PWR0155"  Part="1" 
+F 0 "#PWR0155" H 6350 2350 50  0001 C CNN
+F 1 "+5V" H 6365 2673 50  0000 C CNN
+F 2 "" H 6350 2500 50  0001 C CNN
+F 3 "" H 6350 2500 50  0001 C CNN
+	1    6350 2500
+	1    0    0    -1  
+$EndComp
+Connection ~ 6350 2500
+$Comp
+L power:+3.3V #PWR?
+U 1 1 61D47FBE
+P 7050 3250
+AR Path="/61D47FBE" Ref="#PWR?"  Part="1" 
+AR Path="/61D31681/61D47FBE" Ref="#PWR0156"  Part="1" 
+F 0 "#PWR0156" H 7050 3100 50  0001 C CNN
+F 1 "+3.3V" H 7065 3423 50  0000 C CNN
+F 2 "" H 7050 3250 50  0001 C CNN
+F 3 "" H 7050 3250 50  0001 C CNN
+	1    7050 3250
+	1    0    0    -1  
+$EndComp
+Connection ~ 7050 3250
+$Comp
+L power:+BATT #PWR?
+U 1 1 61D47FC5
+P 4700 2500
+AR Path="/61D47FC5" Ref="#PWR?"  Part="1" 
+AR Path="/61D31681/61D47FC5" Ref="#PWR0157"  Part="1" 
+F 0 "#PWR0157" H 4700 2350 50  0001 C CNN
+F 1 "+BATT" H 4715 2673 50  0000 C CNN
+F 2 "" H 4700 2500 50  0001 C CNN
+F 3 "" H 4700 2500 50  0001 C CNN
+	1    4700 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 61D47FCB
+P 6350 4800
+AR Path="/61D47FCB" Ref="C?"  Part="1" 
+AR Path="/61D31681/61D47FCB" Ref="C26"  Part="1" 
+F 0 "C26" H 6468 4846 50  0000 L CNN
+F 1 "CP" H 6468 4755 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x12.5" H 6388 4650 50  0001 C CNN
+F 3 "~" H 6350 4800 50  0001 C CNN
+	1    6350 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61D47FD1
+P 6050 4800
+AR Path="/61D47FD1" Ref="C?"  Part="1" 
+AR Path="/61D31681/61D47FD1" Ref="C23"  Part="1" 
+F 0 "C23" H 6165 4846 50  0000 L CNN
+F 1 "C" H 6165 4755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 6088 4650 50  0001 C CNN
+F 3 "~" H 6050 4800 50  0001 C CNN
+	1    6050 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61D47FD7
+P 5250 4800
+AR Path="/61D47FD7" Ref="C?"  Part="1" 
+AR Path="/61D31681/61D47FD7" Ref="C20"  Part="1" 
+F 0 "C20" H 5365 4846 50  0000 L CNN
+F 1 "C" H 5365 4755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5288 4650 50  0001 C CNN
+F 3 "~" H 5250 4800 50  0001 C CNN
+	1    5250 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 61D47FDD
+P 4900 4800
+AR Path="/61D47FDD" Ref="C?"  Part="1" 
+AR Path="/61D31681/61D47FDD" Ref="C17"  Part="1" 
+F 0 "C17" H 5018 4846 50  0000 L CNN
+F 1 "CP" H 5018 4755 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x12.5" H 4938 4650 50  0001 C CNN
+F 3 "~" H 4900 4800 50  0001 C CNN
+	1    4900 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 4950 5250 4950
+Connection ~ 5250 4950
+Connection ~ 6050 4950
+Wire Wire Line
+	6050 4950 6350 4950
+Wire Wire Line
+	5950 4650 6050 4650
+Connection ~ 6050 4650
+Wire Wire Line
+	6050 4650 6350 4650
+Wire Wire Line
+	5350 4650 5250 4650
+Connection ~ 5250 4650
+Wire Wire Line
+	5250 4650 4900 4650
+$Comp
+L power:GND #PWR?
+U 1 1 61D47FED
+P 5850 4950
+AR Path="/61D47FED" Ref="#PWR?"  Part="1" 
+AR Path="/61D31681/61D47FED" Ref="#PWR0158"  Part="1" 
+F 0 "#PWR0158" H 5850 4700 50  0001 C CNN
+F 1 "GND" H 5855 4777 50  0000 C CNN
+F 2 "" H 5850 4950 50  0001 C CNN
+F 3 "" H 5850 4950 50  0001 C CNN
+	1    5850 4950
+	1    0    0    -1  
+$EndComp
+Connection ~ 5850 4950
+Wire Wire Line
+	5850 4950 6050 4950
+Wire Wire Line
+	4900 4650 4700 4650
+Connection ~ 4900 4650
+$Comp
+L Regulator_Linear:LM7824_TO220 U?
+U 1 1 61D47FF7
+P 5650 4650
+AR Path="/61D47FF7" Ref="U?"  Part="1" 
+AR Path="/61D31681/61D47FF7" Ref="U10"  Part="1" 
+F 0 "U10" H 5650 4892 50  0000 C CNN
+F 1 "LM7824_TO220" H 5650 4801 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5650 4875 50  0001 C CIN
+F 3 "https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF" H 5650 4600 50  0001 C CNN
+	1    5650 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 4950 5650 4950
+Connection ~ 5650 4950
+Wire Wire Line
+	5650 4950 5850 4950
+$Comp
+L power:VPP #PWR?
+U 1 1 61D48002
+P 6950 4650
+AR Path="/61D48002" Ref="#PWR?"  Part="1" 
+AR Path="/61D31681/61D48002" Ref="#PWR0159"  Part="1" 
+F 0 "#PWR0159" H 6950 4500 50  0001 C CNN
+F 1 "VPP" H 6965 4823 50  0000 C CNN
+F 2 "" H 6950 4650 50  0001 C CNN
+F 3 "" H 6950 4650 50  0001 C CNN
+	1    6950 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3250 4900 3250
+Connection ~ 4700 2500
+$Comp
+L power:+BATT #PWR?
+U 1 1 61D4800B
+P 6450 1600
+AR Path="/61D4800B" Ref="#PWR?"  Part="1" 
+AR Path="/61D31681/61D4800B" Ref="#PWR0160"  Part="1" 
+F 0 "#PWR0160" H 6450 1450 50  0001 C CNN
+F 1 "+BATT" H 6465 1773 50  0000 C CNN
+F 2 "" H 6450 1600 50  0001 C CNN
+F 3 "" H 6450 1600 50  0001 C CNN
+	1    6450 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 1600 4300 1600
+$Comp
+L Device:R R46
+U 1 1 61B03A0A
+P 6100 3400
+F 0 "R46" H 6170 3446 50  0000 L CNN
+F 1 "422" H 6170 3355 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 6030 3400 50  0001 C CNN
+F 3 "~" H 6100 3400 50  0001 C CNN
+	1    6100 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3250 4700 4650
+Connection ~ 4700 3250
+$Comp
+L Device:R R47
+U 1 1 61B13427
+P 6100 3800
+F 0 "R47" H 6170 3846 50  0000 L CNN
+F 1 "680" H 6170 3755 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 6030 3800 50  0001 C CNN
+F 3 "~" H 6100 3800 50  0001 C CNN
+	1    6100 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D22
+U 1 1 61B150F6
+P 6350 3400
+F 0 "D22" V 6304 3480 50  0000 L CNN
+F 1 "D" V 6395 3480 50  0000 L CNN
+F 2 "Diode_SMD:D_2010_5025Metric" H 6350 3400 50  0001 C CNN
+F 3 "~" H 6350 3400 50  0001 C CNN
+	1    6350 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D21
+U 1 1 61B16306
+P 5650 3050
+F 0 "D21" H 5650 3267 50  0000 C CNN
+F 1 "D" H 5650 3176 50  0000 C CNN
+F 2 "Diode_SMD:D_2010_5025Metric" H 5650 3050 50  0001 C CNN
+F 3 "~" H 5650 3050 50  0001 C CNN
+	1    5650 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61B16D9C
+P 6350 3800
+AR Path="/61B16D9C" Ref="C?"  Part="1" 
+AR Path="/61D31681/61B16D9C" Ref="C29"  Part="1" 
+F 0 "C29" H 6465 3846 50  0000 L CNN
+F 1 "C" H 6465 3755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 6388 3650 50  0001 C CNN
+F 3 "~" H 6350 3800 50  0001 C CNN
+	1    6350 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 3550 6750 3950
+Wire Wire Line
+	6750 3950 6350 3950
+Wire Wire Line
+	5100 3950 5100 3550
+Connection ~ 6750 3550
+Connection ~ 6100 3950
+Wire Wire Line
+	6100 3950 5100 3950
+Connection ~ 6200 3950
+Wire Wire Line
+	6200 3950 6100 3950
+Connection ~ 6350 3950
+Wire Wire Line
+	6350 3950 6200 3950
+Connection ~ 5100 3550
+Wire Wire Line
+	5100 3550 5250 3550
+Wire Wire Line
+	6350 3650 6250 3650
+Wire Wire Line
+	6100 3550 6250 3550
+Wire Wire Line
+	6250 3550 6250 3600
+Connection ~ 6250 3550
+Wire Wire Line
+	6250 3550 6350 3550
+Connection ~ 6250 3650
+Wire Wire Line
+	6250 3650 6100 3650
+Wire Wire Line
+	5950 3250 6100 3250
+Connection ~ 6100 3250
+Wire Wire Line
+	6100 3250 6350 3250
+Connection ~ 6350 3250
+Wire Wire Line
+	6350 3250 6750 3250
+Wire Wire Line
+	5650 3550 5650 3600
+Wire Wire Line
+	5650 3600 6250 3600
+Connection ~ 6250 3600
+Wire Wire Line
+	6250 3600 6250 3650
+Wire Wire Line
+	6100 3250 6100 3050
+Wire Wire Line
+	6100 3050 5800 3050
+Wire Wire Line
+	5250 3250 5250 3050
+Wire Wire Line
+	5250 3050 5500 3050
+$Comp
+L Regulator_Linear:LM317_TO-220 U9
+U 1 1 61D389AC
+P 5650 3250
+F 0 "U9" H 5650 3492 50  0000 C CNN
+F 1 "LM317_TO-220" H 5650 3401 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5650 3500 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm317.pdf" H 5650 3250 50  0001 C CNN
+	1    5650 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61DE6129
+P 5250 5450
+AR Path="/61DE6129" Ref="C?"  Part="1" 
+AR Path="/61D31681/61DE6129" Ref="C49"  Part="1" 
+F 0 "C49" H 5365 5496 50  0000 L CNN
+F 1 "C" H 5365 5405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5288 5300 50  0001 C CNN
+F 3 "~" H 5250 5450 50  0001 C CNN
+	1    5250 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61DE6133
+P 6050 5450
+AR Path="/61DE6133" Ref="C?"  Part="1" 
+AR Path="/61D31681/61DE6133" Ref="C50"  Part="1" 
+F 0 "C50" H 6165 5496 50  0000 L CNN
+F 1 "C" H 6165 5405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 6088 5300 50  0001 C CNN
+F 3 "~" H 6050 5450 50  0001 C CNN
+	1    6050 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 61DE613D
+P 6350 5450
+AR Path="/61DE613D" Ref="C?"  Part="1" 
+AR Path="/61D31681/61DE613D" Ref="C51"  Part="1" 
+F 0 "C51" H 6468 5496 50  0000 L CNN
+F 1 "CP" H 6468 5405 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x12.5" H 6388 5300 50  0001 C CNN
+F 3 "~" H 6350 5450 50  0001 C CNN
+	1    6350 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 61DE6147
+P 4900 5450
+AR Path="/61DE6147" Ref="C?"  Part="1" 
+AR Path="/61D31681/61DE6147" Ref="C48"  Part="1" 
+F 0 "C48" H 5018 5496 50  0000 L CNN
+F 1 "CP" H 5018 5405 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_10x12.5" H 4938 5300 50  0001 C CNN
+F 3 "~" H 4900 5450 50  0001 C CNN
+	1    4900 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 5600 5250 5600
+Connection ~ 5250 5600
+Connection ~ 6050 5600
+Wire Wire Line
+	6050 5600 6350 5600
+$Comp
+L power:GND #PWR?
+U 1 1 61DE6158
+P 5850 5600
+AR Path="/61DE6158" Ref="#PWR?"  Part="1" 
+AR Path="/61D31681/61DE6158" Ref="#PWR0196"  Part="1" 
+F 0 "#PWR0196" H 5850 5350 50  0001 C CNN
+F 1 "GND" H 5855 5427 50  0000 C CNN
+F 2 "" H 5850 5600 50  0001 C CNN
+F 3 "" H 5850 5600 50  0001 C CNN
+	1    5850 5600
+	1    0    0    -1  
+$EndComp
+Connection ~ 5850 5600
+Wire Wire Line
+	5850 5600 6050 5600
+Wire Wire Line
+	6350 5300 6050 5300
+Connection ~ 6050 5300
+Wire Wire Line
+	6050 5300 5950 5300
+Wire Wire Line
+	4700 4650 4700 5300
+Wire Wire Line
+	4700 5300 4900 5300
+Connection ~ 4700 4650
+Connection ~ 4900 5300
+Wire Wire Line
+	4900 5300 5250 5300
+Connection ~ 5250 5300
+Wire Wire Line
+	5250 5300 5350 5300
+$Comp
+L Regulator_Linear:L7812 U16
+U 1 1 61DF45DF
+P 5650 5300
+F 0 "U16" H 5650 5542 50  0000 C CNN
+F 1 "L7812" H 5650 5451 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 5675 5150 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 5650 5250 50  0001 C CNN
+	1    5650 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 5600 5650 5600
+Connection ~ 5650 5600
+Wire Wire Line
+	5650 5600 5850 5600
+$Comp
+L power:+12V #PWR0197
+U 1 1 61DFA26F
+P 6350 5300
+F 0 "#PWR0197" H 6350 5150 50  0001 C CNN
+F 1 "+12V" H 6365 5473 50  0000 C CNN
+F 2 "" H 6350 5300 50  0001 C CNN
+F 3 "" H 6350 5300 50  0001 C CNN
+	1    6350 5300
+	1    0    0    -1  
+$EndComp
+Connection ~ 6350 5300
+$Comp
+L Device:Fuse F1
+U 1 1 62391DE3
+P 4950 1600
+F 0 "F1" V 4753 1600 50  0000 C CNN
+F 1 "Fuse" V 4844 1600 50  0000 C CNN
+F 2 "Fuse:Fuse_1206_3216Metric" V 4880 1600 50  0001 C CNN
+F 3 "~" H 4950 1600 50  0001 C CNN
+	1    4950 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D23
+U 1 1 623927A4
+P 6050 1750
+F 0 "D23" V 6004 1830 50  0000 L CNN
+F 1 "D" V 6095 1830 50  0000 L CNN
+F 2 "Diode_SMD:D_2010_5025Metric" H 6050 1750 50  0001 C CNN
+F 3 "~" H 6050 1750 50  0001 C CNN
+	1    6050 1750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6450 1600 6050 1600
+Connection ~ 6050 1600
+Wire Wire Line
+	4800 1900 4800 1700
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 623A8CFE
+P 5200 1650
+AR Path="/623A8CFE" Ref="J?"  Part="1" 
+AR Path="/61D31681/623A8CFE" Ref="J1"  Part="1" 
+F 0 "J1" H 5308 1831 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 5308 1740 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5200 1650 50  0001 C CNN
+F 3 "~" H 5200 1650 50  0001 C CNN
+	1    5200 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 1900 5400 1900
+Connection ~ 4800 1900
+Wire Wire Line
+	5400 1750 5400 1900
+Connection ~ 5400 1900
+Wire Wire Line
+	5100 1600 5400 1600
+Wire Wire Line
+	5400 1650 5400 1600
+Connection ~ 5400 1600
+Text Notes 5150 5900 0    50   ~ 0
+TODO CHANGE 12V to 9V
+Text Notes 7650 4650 0    50   ~ 0
+YIG DRIVER VOLTAGE
+Text Notes 6600 5300 0    50   ~ 0
+GATE DRIVE VOLTAGE. MAKE SURE TO KEEP THIS VPP+VG OF YIG TRANSISTORS.
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 628A7261
+P 6550 4450
+AR Path="/628A7261" Ref="J?"  Part="1" 
+AR Path="/61D31681/628A7261" Ref="J21"  Part="1" 
+F 0 "J21" H 6658 4631 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 6658 4540 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6550 4450 50  0001 C CNN
+F 3 "~" H 6550 4450 50  0001 C CNN
+	1    6550 4450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6950 4650 6550 4650
+Wire Wire Line
+	6450 4650 6350 4650
+Connection ~ 6350 4650
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 628AF277
+P 3900 1250
+AR Path="/628AF277" Ref="J?"  Part="1" 
+AR Path="/61D31681/628AF277" Ref="J19"  Part="1" 
+F 0 "J19" H 4008 1431 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 4008 1340 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3900 1250 50  0001 C CNN
+F 3 "~" H 3900 1250 50  0001 C CNN
+	1    3900 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 1350 4200 1350
+Wire Wire Line
+	4200 1350 4200 1700
+Connection ~ 4200 1700
+Wire Wire Line
+	4200 1700 4800 1700
+Wire Wire Line
+	4100 1250 4300 1250
+Wire Wire Line
+	4300 1250 4300 1600
+Connection ~ 4300 1600
+Wire Wire Line
+	4300 1600 4100 1600
+Wire Wire Line
+	5400 1900 6050 1900
+Wire Wire Line
+	5400 1600 6050 1600
+$EndSCHEMATC
